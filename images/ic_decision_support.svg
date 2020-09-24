@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="94px" height="96px" viewBox="0 0 94 96" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 59.1 (86144) - https://sketch.com -->
+    <title>ic_Clinical decision support platform to optimise therapy</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="84.4399491%" y1="79.0834119%" x2="24.4998028%" y2="15.5143916%" id="linearGradient-1">
+            <stop stop-color="#21CDB8" stop-opacity="0" offset="0%"></stop>
+            <stop stop-color="#29D2BD" stop-opacity="0.116531906" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="100%" y1="50%" x2="0%" y2="50%" id="linearGradient-2">
+            <stop stop-color="#4BE5D3" offset="0%"></stop>
+            <stop stop-color="#1BCAB4" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Design" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Homepage_V6" transform="translate(-676.000000, -2604.000000)">
+            <g id="End-to-end-precision-medicine-support" transform="translate(155.000000, 2468.000000)">
+                <g id="Get-answers" transform="translate(400.000000, 132.000000)">
+                    <g id="ic_Clinical-decision-support-platform-to-optimise-therapy" transform="translate(108.000000, 0.000000)">
+                        <rect id="Rectangle" opacity="0.100000001" x="0" y="0" width="116" height="116" rx="16.6666667"></rect>
+                        <path d="M70.9702424,6.57796867 L99.4702424,22.9455752 C104.12802,25.6205463 107,30.5818377 107,35.9530914 L107,68.5510408 C107,73.9222945 104.12802,78.8835859 99.4702424,81.5585571 L70.9702424,97.9261636 C66.3443746,100.582809 60.6556254,100.582809 56.0297576,97.9261636 L27.5297576,81.5585571 C22.8719797,78.8835859 20,73.9222945 20,68.5510408 L20,35.9530914 C20,30.5818377 22.8719797,25.6205463 27.5297576,22.9455752 L56.0297576,6.57796867 C60.6556254,3.92132367 66.3443746,3.92132367 70.9702424,6.57796867 Z" id="Polygon-Copy-8" fill="url(#linearGradient-1)" transform="translate(63.500000, 52.252066) rotate(180.000000) translate(-63.500000, -52.252066) "></path>
+                        <g id="Group-9" transform="translate(13.333333, 15.000000)">
+                            <g id="chat">
+                                <path d="M3.33333333,0 L52.6666667,0 C54.5076158,-7.82266085e-16 56,1.49238417 56,3.33333333 L56,74 L56,74 L8,74 C3.581722,74 5.41083001e-16,70.418278 0,66 L0,3.33333333 C-6.6954046e-16,1.49238417 1.49238417,-4.99089364e-15 3.33333333,0 Z" id="Rectangle" fill="url(#linearGradient-2)"></path>
+                                <path d="M71.1666667,58.5 L16.5,58.5 L16.5,66 C16.5,69.2468867 14.6794981,72.0685724 12.0035515,73.5 L63.6666667,73.5 C67.8088023,73.5 71.1666667,70.1421356 71.1666667,66 L71.1666667,58.5 Z" id="Combined-Shape" stroke="#0087FF" fill="#FFFFFF"></path>
+                                <line x1="13.3333333" y1="18.5" x2="42.6666667" y2="18.5" id="Path-2" stroke="#FFFFFF" stroke-width="3.33333333" stroke-linejoin="round"></line>
+                                <line x1="13.3333333" y1="32.5" x2="42.6666667" y2="32.5" id="Path-2-Copy-3" stroke="#FFFFFF" stroke-width="3.33333333" stroke-linejoin="round"></line>
+                                <line x1="13.3333333" y1="46.5" x2="29.3333333" y2="46.5" id="Path-2-Copy-4" stroke="#FFFFFF" stroke-width="3.33333333" stroke-linejoin="round"></line>
+                            </g>
+                            <g id="Group-29" transform="translate(49.666667, 10.000000)" stroke-linejoin="round">
+                                <circle id="Oval" stroke="#F9946B" stroke-width="2" fill="#FFFFFF" stroke-linecap="round" cx="18" cy="18" r="18"></circle>
+                                <polyline id="Path" stroke="#3DDDCA" stroke-width="3.33333333" transform="translate(17.939340, 15.853553) rotate(-45.000000) translate(-17.939340, -15.853553) " points="25.2726732 19.5202201 10.6060065 19.5202201 10.6060065 12.1868867 10.6060065 12.1868867"></polyline>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
