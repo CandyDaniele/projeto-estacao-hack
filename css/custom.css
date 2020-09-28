@@ -67,6 +67,89 @@ header nav a:hover::after {
 }
 
 /*----------------------------------------------
+    Body-Main-Section_Tela de Dados
+----------------------------------------------*/
+.container-fluid{
+  width: 80%;
+}
+
+.row{
+  margin-top: 4%;
+  justify-content: space-around;
+}
+
+.centralizado{
+  text-align: center;
+}
+
+
+#nome{
+  color: #F47C46;
+  font-size: 48px;
+  padding-top: 3%;
+  padding-bottom: 2%;
+  font-weight: bold;
+}
+
+p{
+  font-size: 35px;
+}
+
+.identificacao{
+  font-weight: bold;
+  padding-top: 3%;
+ }
+
+.dados{
+  color: #F47C46;
+  font-size: 43px;
+  padding-top: 2%;
+  padding-bottom: 6%;
+}
+
+.descricao{
+  font-size: 28px ;
+}
+
+.destaque{
+  background-color:rgb(247, 252, 251);
+}
+
+.justificado{
+  text-align: justify;
+  font-size: 20px;
+  padding-right: 100px;
+}
+
+.titulo{
+  color: black;
+  font-weight: bold;
+  font-size: 40px;
+  margin-top: 100px;
+  margin-bottom: 60px;
+}
+
+.centro{
+  padding-top: 20%;
+}
+
+.card{
+  border: 0.5px solid rgb(236, 236, 236);
+  box-shadow:  -1px 10px 12px -4px rgb(231, 230, 230);
+  margin:1%;
+  padding: 6px;
+}
+
+.centro2{
+  padding-top: 5%;
+}
+
+a {
+  color: black;
+  font-weight: bold;
+}
+
+/*----------------------------------------------
     Footer
 ----------------------------------------------*/
 footer {
