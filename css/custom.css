@@ -31,6 +31,7 @@ nav a:hover {
 }
 nav a {
   position: relative;
+  text-align: right;
 }
 header nav a:hover {
   transition: 700ms;
@@ -42,35 +43,11 @@ header nav a::after {
   height: 5px;
   background-color: var(--secondary-color);
   position: absolute;
-  left: 0;
+  right: 0;
   bottom: -10px;
 }
 
 header nav a:hover::after {
   width: 100%;
   transition: width 400ms ease-in-out;
-}
-
-/*----------------------------------------------
-    Body-Main-Section
-----------------------------------------------*/
-.dados-pessoais {
-  display: flex;
-  flex-direction: flex-start;
-}
-
-.foto {
-  width: 10%;
-  height: 10%;
-  border-radius: 50%;
-}
-
-/*----------------------------------------------
-    Footer
-----------------------------------------------*/
-footer {
-  background-color: black;
-  color: white;
-  box-sizing: border-box;
-  text-align: center;
 }
