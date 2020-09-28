@@ -5,11 +5,11 @@
   box-sizing: border-box;
 }
 :root {
-  --primary-color:#228483;
-  --secondary-color:#F47C46;
-  --text-color:#606060;
-  --title-color:#3C3C3C;
-  --dark-color:#12253D;
+  --primary-color: #228483;
+  --secondary-color: #f47c46;
+  --text-color: #606060;
+  --title-color: #3c3c3c;
+  --dark-color: #12253d;
 }
 
 body {
@@ -25,7 +25,8 @@ nav {
   background-color: var(--primary-color);
 }
 
-nav a, nav a:hover {
+nav a,
+nav a:hover {
   color: #ffffff;
 }
 nav a {
@@ -36,17 +37,18 @@ header nav a:hover {
 }
 
 header nav a::after {
-  content: "";
-    width: 0;
-    height: 5px;
-    background-color: var(--secondary-color);
-    position: absolute;
-    left: 0;
-    bottom: -10px;
+  content: '';
+  width: 0;
+  height: 5px;
+  background-color: var(--secondary-color);
+  position: absolute;
+  left: 0;
+  bottom: -10px;
 }
 
 header nav a:hover::after {
   width: 100%;
   transition: width 400ms ease-in-out;
-
 }
+
+/* Footer */
