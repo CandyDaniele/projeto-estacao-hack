@@ -51,3 +51,27 @@ header nav a:hover::after {
   width: 100%;
   transition: width 400ms ease-in-out;
 }
+
+/*----------------------------------------------
+    Body-Main-Section
+----------------------------------------------*/
+.dados-pessoais {
+  display: flex;
+  flex-direction: flex-start;
+}
+
+.foto {
+  width: 10%;
+  height: 10%;
+  border-radius: 50%;
+}
+
+/*----------------------------------------------
+    Footer
+----------------------------------------------*/
+footer {
+  background-color: black;
+  color: white;
+  box-sizing: border-box;
+  text-align: center;
+}
