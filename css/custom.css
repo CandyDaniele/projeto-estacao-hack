@@ -71,11 +71,26 @@ header nav a:hover::after {
   padding:0px;
 }
 
+@media(max-width:720px){
+
+#formulario{
+  margin-bottom:5px;
+}
+
+
+
+}
+
 #search {
   background-color: #2AA095;
-  height:11.666vh;
+  /* height:11.666vh; */
   margin:0;
   
+}
+
+form{
+  background-color: #2AA095;
+  padding:10px;
 }
 
 section H1{
@@ -83,20 +98,20 @@ section H1{
   font-weight: bolder;
   display:block;
   text-align: center;
-  padding: 75px 15px;
+  padding: 30px 15px;
 }
 
 section H3{
  
   color: #ffffff;
   text-align: center;
-  padding-top:60px;
+  padding-bottom:30px;
   font-weight: bolder;
-  margin:10px auto;
+  margin:0;
 }
 
 #main{
-  height: 32.5vh;
+  /* height: 32.5vh; */
 }
 
 #svg{
@@ -118,6 +133,7 @@ section H3{
 
  .row{
   margin:50px;
+  
 }
 
 
@@ -143,9 +159,14 @@ footer span{
   text-align: center;
   
 }
+footer p{
+  margin:0;
+  padding:0;
+}
 
 #footer{
   margin:0;
+
 }
 
 
