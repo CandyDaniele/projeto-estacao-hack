@@ -1,0 +1,12 @@
+
+.dados-pessoais {
+  display: flex;
+  flex-direction: flex-start;
+}
+
+.foto {
+  width: 10%;
+  height: 10%;
+  border-radius: 50%;
+}
+

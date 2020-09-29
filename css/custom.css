@@ -13,6 +13,7 @@
 }
 
 body {
+  
   font-family: Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased !important;
 }
@@ -30,21 +31,24 @@ nav a:hover {
   color: #ffffff;
 }
 nav a {
-  position: relative;
+  position:relative;
   text-align: right;
+  
 }
 header nav a:hover {
   transition: 700ms;
 }
 
 header nav a::after {
-  content: '';
-  width: 0;
-  height: 5px;
-  background-color: var(--secondary-color);
-  position: absolute;
-  right: 0;
-  bottom: -10px;
+
+  content: "";
+    width: 0;
+    height: 5px;
+    background-color: var(--secondary-color);
+    position: absolute;
+    right: 0;
+    bottom: -10px;
+
 }
 
 header nav a:hover::after {
@@ -52,109 +56,96 @@ header nav a:hover::after {
   transition: width 400ms ease-in-out;
 }
 
-/*----------------------------------------------
-    Body-Main-Section
-----------------------------------------------*/
-.dados-pessoais {
-  display: flex;
-  flex-direction: flex-start;
+.bg-menu{
+  background-color: #228483!important;
 }
 
-.foto {
-  width: 10%;
-  height: 10%;
-  border-radius: 50%;
+#home{
+  padding-right: 30px;
 }
 
 /*----------------------------------------------
-    Body-Main-Section_Tela de Dados
+    SECTION
 ----------------------------------------------*/
 .container-fluid{
-  width: 80%;
+  padding:0px;
 }
 
-.row{
-  margin-top: 4%;
-  justify-content: space-around;
+#search {
+  background-color: #2AA095;
+  height:11.666vh;
+  margin:0;
+  
 }
 
-.centralizado{
+section H1{
+  color: white;
+  font-weight: bolder;
+  display:block;
   text-align: center;
+  padding: 75px 15px;
 }
 
-
-#nome{
-  color: #F47C46;
-  font-size: 48px;
-  padding-top: 3%;
-  padding-bottom: 2%;
-  font-weight: bold;
+section H3{
+ 
+  color: #ffffff;
+  text-align: center;
+  padding-top:60px;
+  font-weight: bolder;
+  margin:10px;
 }
 
-p{
-  font-size: 35px;
+#main{
+  height: 32.5vh;
 }
 
-.identificacao{
-  font-weight: bold;
-  padding-top: 3%;
- }
-
-.dados{
-  color: #F47C46;
-  font-size: 43px;
-  padding-top: 2%;
-  padding-bottom: 6%;
+#svg{
+  height: 30vh;
+  margin:0;
 }
 
-.descricao{
-  font-size: 28px ;
+.um {
+  
+  padding-right:50px;
+  padding-top:25px;
 }
 
-.destaque{
-  background-color:rgb(247, 252, 251);
+.dois {
+  
+  padding-left:50px;
+  
 }
 
-.justificado{
-  text-align: justify;
-  font-size: 20px;
-  padding-right: 100px;
+ .row{
+  margin:50px;
 }
 
-.titulo{
-  color: black;
-  font-weight: bold;
-  font-size: 40px;
-  margin-top: 100px;
-  margin-bottom: 60px;
-}
-
-.centro{
-  padding-top: 20%;
-}
-
-.card{
-  border: 0.5px solid rgb(236, 236, 236);
-  box-shadow:  -1px 10px 12px -4px rgb(231, 230, 230);
-  margin:1%;
-  padding: 6px;
-}
-
-.centro2{
-  padding-top: 5%;
-}
-
-a {
-  color: black;
-  font-weight: bold;
-}
 
 /*----------------------------------------------
-    Footer
+    FOOTER
 ----------------------------------------------*/
-footer {
-  background-color: black;
-  color: white;
-  box-sizing: border-box;
-  text-align: center;
+footer{
+  
+  margin:0;
+  background-color: #12253D;
+  height: 100%;
 }
+
+
+footer span{
+  color: #8593A3;
+  align-items: center;
+  font-size: 30px;
+  font-weight: bolder;
+  display:block;
+  padding:40px 100px 40px 100px;
+  margin:0;
+  text-align: center;
+  
+}
+
+#footer{
+  margin:0;
+}
+
+
