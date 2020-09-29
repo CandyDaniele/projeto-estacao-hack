@@ -1,67 +1,118 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/reset.css" />
-    <link rel="stylesheet" href="css/bootstrap.min.css" />
-    <link rel="stylesheet" href="css/custom.css" />
-    <link rel="stylesheet" href="css/sobre.css" />
-    <title>Conecta Farma</title>
-  </head>
 
-  <body>
-    <header>
-      <nav class="navbar navbar-expand-lg">
-        <a class="navbar-brand" href="#"><img src = "./images/site-logo-1.png"></a>
-        <nav class="navbar navbar-dark bg-menu">
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-      </nav>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item active">
-              <a class="nav-link" id="home" href="./index.html">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="./sobre.html">Sobre o projeto</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="./somos.html">Quem somos </a>
-            </li>
-          </ul>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/reset.css" />
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <link rel="stylesheet" href="css/sobre.css" />
+  <title>Sobre</title>
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg">
+      <a class="navbar-brand" href="index.html">
+        <img class="img-fluid" src="images/site-logo-1.png" alt="">
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="ph__navbar-list collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" id="home" href="./index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./sobre.html">Sobre o projeto</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./somos.html">Quem somos </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="ph__banner-search">
+      <div class="container py-5">
+        <div class="pb-4">
+          <h1 class="text-white">A maneira mais fácil de encontrar valores de remédio</h1>
+          <p class="text-white">Encontre valores</p>
         </div>
-      </nav>
-    </header>
-    <main>
-      <section class="container-fluid">
-        <div class= "container">
-        <p><h1> <strong>Sobre o projeto  </strong>   </h1>   </p>
+        <div class="form">
+          <form>
+            <div class="row">
+              <div class="col-md-5 mb-2 mb-md-0 pr-md-0">
+                <input class="ph__field-name" type="text" placeholder="Nome do Remédio">
+              </div>
+              <div class="col-md-5 mb-2 mb-md-0 pr-md-0">
+                <input class="ph__field-state" type="text" placeholder="Estado">
+              </div>
+              <div class="col-md-2 mb-2 mb-md-0">
+                <button type="submit">
+                  <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-search" fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
+                      d="M10.442 10.442a1 1 0 0 1 1.415 0l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1 1 0 0 1 0-1.415z" />
+                    <path fill-rule="evenodd"
+                      d="M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11zM13 6.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
       </div>
-      <div class= "container"> <h2> <strong> Lorem ipsum dolor sit amet  </strong> </h2> <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p></div>
-      <br>
-      <div class= "container"> <p> <h2> <strong> Lorem ipsum dolor sit amet  </strong> </h2> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p></div>
-      </section>
-    </main>
-    <footer class="container-fluid">
-      <div class="row" id="footer">
-      <p class="col-3"></p>
-      <span class="col-6">© 2013-2020. Todos os direitos reservados.</span>
-      <p class="col-3"></p>
+    </div>
+  </header>
+  <main role="main" class="container">
+    <div class="ph__main-title">
+      <h1><span class="ribbon"></span>Sobre o projeto</h1>
+    </div>
+    <div class="mt-3 mb-5">
+      <div class="row featurette">
+        <div class="col-md-5 order-md-1">
+          <img class="img-fluid" src="images/img_logo_dh.png" alt="Logo da Estação Hack">
+        </div>
+        <div class="col-md-7 order-md-2">
+          <h2 class="featurette-heading">A Estação Hack é o primeiro centro para inovação criado pelo Facebook no mundo.
+          </h2>
+          <p class="lead">Projetada para
+            o público brasileiro, a iniciativa vai promover a formação de talentos em tecnologia, capacitar
+            empreendedores e acelerar startups de impacto social. <br>
+            o curso da Digital House tem como objetivo formar novos profissionais de programação Front-End. O programa
+            foi desenvolvido para quem quer aprender a programar do zero e adquirir habilidades em React (CSS, HTML e
+            JavaScript), além de soft skills em Git e Metodologias Ágeis.
+          </p>
+        </div>
       </div>
-      </footer>
-  </body>
-  <script src="js/jquery-3.5.1.slim.min.js"></script>
-  <script src="js/popper.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/script.js"></script>
+      <hr class="featurette-divider">
+      <div class="row featurette">
+        <div class="col-md-5 order-md-2">
+          <img class="img-fluid" src="images/Tarja.svg" alt="Imagem de um menino estudando">
+        </div>
+        <div class="col-md-7 order-md-1">
+          <h2 class="featurette-heading">Uma iniciativa pioneira do Facebook
+          </h2>
+          <p class="lead">Iniciativa pioneira do Facebook, a Estação Hack está localizada no coração da cidade de São
+            Paulo, onde serão oferecidas milhares de vagas em cursos e treinamentos gratuitos. O espaço será
+            inteiramente pensado para promover o encontro de ideias - incorporando elementos do DNA do Facebook
+            conhecido como 'cultura Hack' -, com a premissa de que tudo está em permanente construção e pode ser
+            aperfeiçoado de forma colaborativa. A Estação Hack deverá ser aberta até o fim de 2017.</p>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer class="footer">
+    <div class="container">
+      <span>Copyright © 2020 Projeto. All Rights Reserved</span>
+    </div>
+  </footer>
+</body>
+<script src="js/jquery-3.5.1.slim.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/script.js"></script>
+
 </html>
