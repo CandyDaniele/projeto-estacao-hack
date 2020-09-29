@@ -84,4 +84,4 @@
       text-align: left;
   }
 
-  .card a {color : #000000}
+  a.card {color: #000000; text-decoration: none;}
