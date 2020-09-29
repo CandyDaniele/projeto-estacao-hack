@@ -2,8 +2,9 @@
 /*----------------------------------------------
     Body-Main-Section_Tela de Dados
 ----------------------------------------------*/
-.container-fluid{
+.dadospadding{
   width: 80%;
+  margin:auto;
 }
 
 .row{
