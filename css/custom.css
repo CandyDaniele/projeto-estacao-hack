@@ -26,32 +26,33 @@ nav {
   background-color: var(--primary-color);
 }
 
-nav a,
-nav a:hover {
+.navbar-brand > img {
+  max-width: 132px;
+}
+
+.navbar-toggler-icon{background-image:url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0, 0, 0, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E")}
+
+nav a, nav a:hover {
   color: #ffffff;
 }
 nav a {
-  position:relative;
-  text-align: right;
-  
+  position: relative;
 }
-header nav a:hover {
+header .ph__navbar-list a:hover {
   transition: 700ms;
 }
 
-header nav a::after {
-
+header .ph__navbar-list a::after {
   content: "";
     width: 0;
     height: 5px;
     background-color: var(--secondary-color);
     position: absolute;
-    right: 0;
-    bottom: -10px;
-
+    left: 0;
+    bottom: -5px;
 }
 
-header nav a:hover::after {
+header .ph__navbar-list a:hover::after {
   width: 100%;
   transition: width 400ms ease-in-out;
 }
