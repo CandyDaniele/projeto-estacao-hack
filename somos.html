@@ -6,158 +6,190 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="css/reset.css" />
   <link rel="stylesheet" href="css/bootstrap.min.css" />
-  <link rel="stylesheet" href="css/custom.css" />
   <link rel="stylesheet" href="css/somos.css" />
-
-  <title>Conecta Farma</title>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:700" rel="stylesheet">
+  <title>Quem somos</title>
 </head>
 
 <body>
   <header>
     <nav class="navbar navbar-expand-lg">
-      <a class="navbar-brand" href="#"><img src="./images/site-logo-1.png"></a>
-      <nav class="navbar navbar-dark bg-menu">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-      </nav>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <a class="navbar-brand" href="index.html">
+        <img class="img-fluid" src="images/site-logo-1.png" alt="">
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="ph__navbar-list collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item active">
-            <a class="nav-link" id="home" href="./index.html">Home</a>
+            <a href="index.html" class="nav-link">Home</a>
+          </li>
+          <li class="nav-item active">
+            <a href="filtro.html" class="nav-link">Filtro</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="./sobre.html">Sobre o projeto</a>
+            <a href="sobre.html" class="nav-link">Sobre o projeto</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="./somos.html">Quem somos </a>
+            <a href="quem-somos.html" class="nav-link">Quem somos</a>
           </li>
         </ul>
       </div>
     </nav>
+    <div class="ph__banner-search">
+      <div class="container py-5">
+        <div class="pb-4">
+          <h1 class="text-white">A maneira mais fácil de encontrar valores de remédio</h1>
+          <p class="text-white">Encontre valores</p>
+        </div>
+        <div class="form">
+          <form>
+            <div class="row">
+              <div class="col-md-5 mb-2 mb-md-0 pr-md-0">
+                <input class="ph__field-name" type="text" placeholder="Nome do Remédio">
+              </div>
+              <div class="col-md-5 mb-2 mb-md-0 pr-md-0">
+                <input class="ph__field-state" type="text" placeholder="Estado">
+              </div>
+              <div class="col-md-2 mb-2 mb-md-0">
+                <button type="submit">
+                  <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-search" fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
+                      d="M10.442 10.442a1 1 0 0 1 1.415 0l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1 1 0 0 1 0-1.415z" />
+                    <path fill-rule="evenodd"
+                      d="M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11zM13 6.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
   </header>
-  <main>
-    <section class="container-fluid">
-      <div class="container">
+  <main role="main" class="container">
+    <div class="ph__main-title">
+      <h1><span class="ribbon"></span>Quem somos</h1>
+    </div>
+    <div class="mt-5 mb-5">
+      <div class="row featurette">
+        <div class="col-md-5 order-md-1 ph__about__img-team mb-5 mb-md-0">
+          <img class="img-fluid mx-auto d-block" src="images/ft-daniela.jpeg" alt="Daniele de Oliveira Lucas">
+        </div>
+        <div class="col-md-7 order-md-2">
+          <h2>Daniele de Oliveira Lucas</h2>
+          <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus dignissim mi eu mauris
+            mattis maximus. Nunc metus erat, dignissim nec ornare eget, gravida sit amet augue. Vestibulum aliquet
+            mauris neque, nec pulvinar enim porta quis.Vestibulum aliquet
+            mauris neque, nec pulvinar enim porta quis.</p>
+          <ul class="social-networks spin-icon">
+            <li><a target="_blank" href="https://www.linkedin.com/in/daniele-oliveira-lucas-8a685683/"
+                class="icon-linkedin">LinkedIn</a></li>
+            <li><a target="_blank" href="https://github.com/CandyDaniele" class="icon-github">Github</a></li>
+          </ul>
+        </div>
+      </div>
+      <hr class="featurette-divider">
+      <div class="row featurette">
+        <div class="col-md-5 order-md-2 ph__about__img-team mb-5 mb-md-0">
+          <img class="img-fluid mx-auto d-block" src="images/ft-gabriel.jpg" alt="Gabriel Akira Yano">
+        </div>
+        <div class="col-md-7 order-md-1">
+          <h2>Gabriel Akira Yano</h2>
+          <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus dignissim mi eu mauris
+            mattis maximus. Nunc metus erat, dignissim nec ornare eget, gravida sit amet augue. Vestibulum aliquet
+            mauris neque, nec pulvinar enim porta quis.Vestibulum aliquet
+            mauris neque, nec pulvinar enim porta quis.</p>
+          <ul class="social-networks spin-icon">
+            <li><a target="_blank" href="https://www.linkedin.com/in/gabrielyano/" class="icon-linkedin">LinkedIn</a>
+            </li>
+            <li><a target="_blank" href="https://github.com/akirayano2" class="icon-github">Github</a></li>
+          </ul>
+        </div>
+      </div>
 
+      <hr class="featurette-divider">
+      <div class="row featurette">
+        <div class="col-md-5 order-md-1 ph__about__img-team mb-5 mb-md-0">
+          <img class="img-fluid mx-auto d-block" src="images/ft-gabriel2.jpg" alt="Gabriel Ortiz Porto">
+        </div>
+        <div class="col-md-7 order-md-2">
+          <h2>Gabriel Ortiz Porto</h2>
+          <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus dignissim mi eu mauris
+            mattis maximus. Nunc metus erat, dignissim nec ornare eget, gravida sit amet augue. Vestibulum aliquet
+            mauris neque, nec pulvinar enim porta quis.Vestibulum aliquet
+            mauris neque, nec pulvinar enim porta quis. </p>
+          <ul class="social-networks spin-icon">
+            <li><a target="_blank" href="https://www.linkedin.com/in/gabriel-ortiz-porto-57a53939/"
+                class="icon-linkedin">LinkedIn</a></li>
+            <li><a target="_blank" href="https://github.com/gabrielortizporto" class="icon-github">Github</a></li>
+          </ul>
+        </div>
+      </div>
 
-        <!-- Nossas informações -->
-        <section>
-          <h1>Quem somos</h1>
-          <div class="dados-pessoais" id="dani-candy">
-            <img src="./images/Foto Daniela de Oliveira Lucas.jpeg" alt="foto-gabriel-akira" class="foto" />
+      <hr class="featurette-divider">
+      <div class="row featurette">
+        <div class="col-md-5 order-md-2 ph__about__img-team mb-5 mb-md-0">
+          <img class="img-fluid mx-auto d-block" src="images/ft-lara.jpeg" alt="Lara Vieira Coelho">
+        </div>
+        <div class="col-md-7 order-md-1">
+          <h2>Lara Vieira Coelho</h2>
+          <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus dignissim mi eu mauris
+            mattis maximus. Nunc metus erat, dignissim nec ornare eget, gravida sit amet augue. Vestibulum aliquet
+            mauris neque, nec pulvinar enim porta quis.Vestibulum aliquet
+            mauris neque, nec pulvinar enim porta quis.</p>
+          <ul class="social-networks spin-icon">
+            <li><a target="_blank" href="https://www.linkedin.com/in/lara-vieira-coelho-57731a1a7/"
+                class="icon-linkedin">LinkedIn</a></li>
+            <li><a target="_blank" href="https://github.com/laraavc16" class="icon-github">Github</a></li>
+          </ul>
+        </div>
+      </div>
 
-            <ul>
-              <li>
-                <h2>Daniele de Oliveira Lucas</h2>
-              </li>
-              <li>daniele_oli_lucas@hotmail.com</li>
-              <li>São Paulo/SP</li>
-              <p>
-                <a href="https://www.linkedin.com/in/daniele-oliveira-lucas-8a685683/"><img
-                    src="./images/linkedin-logo.png" alt="" /></a>
+      <hr class="featurette-divider">
+      <div class="row featurette">
+        <div class="col-md-5 order-md-1 ph__about__img-team mb-5 mb-md-0">
+          <img class="img-fluid mx-auto d-block" src="images/ft-let.jpeg" alt="Letícia Câmara">
+        </div>
+        <div class="col-md-7 order-md-2">
+          <h2>Letícia Câmara</h2>
+          <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus dignissim mi eu mauris
+            mattis maximus. Nunc metus erat, dignissim nec ornare eget, gravida sit amet augue. Vestibulum aliquet
+            mauris neque, nec pulvinar enim porta quis.Vestibulum aliquet
+            mauris neque, nec pulvinar enim porta quis.</p>
+          <ul class="social-networks spin-icon">
+            <li><a target="_blank" href="https://www.linkedin.com/in/letcamara/" class="icon-linkedin">LinkedIn</a></li>
+            <li><a target="_blank" href="https://github.com/letcamara" class="icon-github">Github</a></li>
+          </ul>
+        </div>
+      </div>
 
-                <a href="https://github.com/CandyDaniele"><img src="./images/github-logo.png" alt="" /></a>
-              </p>
-            </ul>
-          </div>
-          <div class="dados-pessoais" id="gabriel-akira">
-            <img src="./images/Foto Gabriel Akira Yano.jpg" alt="foto-gabriel-akira" class="foto" />
-            <ul>
-              <li>
-                <h2>Gabriel Akira Yano</h2>
-              </li>
-              <li>gabriel2.yano@gmail.com</li>
-              <li>Curitiba/PR</li>
-              <li>
-                <p>
-                  <a href="https://www.linkedin.com/in/gabrielyano/"><img src="./images/linkedin-logo.png" alt="" /></a>
+      <hr class="featurette-divider">
+      <div class="row featurette">
+        <div class="col-md-5 order-md-2 ph__about__img-team mb-5 mb-md-0">
+        </div>
+        <div class="col-md-7 order-md-1">
+          <h2>Luis Felipe Monte Maior</h2>
+          <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus dignissim mi eu mauris
+            mattis maximus. Nunc metus erat, dignissim nec ornare eget, gravida sit amet augue. Vestibulum aliquet
+            mauris neque, nec pulvinar enim porta quis.Vestibulum aliquet
+            mauris neque, nec pulvinar enim porta quis.</p>
+          <ul class="social-networks spin-icon">
+            <li><a target="_blank" href="https://www.linkedin.com/in/luis-felipe-maior-8a5330146"
+                class="icon-linkedin">LinkedIn</a></li>
+            <li><a target="_blank" href="https://github.com/b4ndini" class="icon-github">Github</a></li>
+          </ul>
+        </div>
+      </div>
 
-                  <a href="https://github.com/akirayano2"><img src="./images/github-logo.png" alt="" /></a>
-                </p>
-              </li>
-            </ul>
-          </div>
-          <div class="dados-pessoais" id="gabriel-porto">
-            <img src="./images/Foto Gabriel Ortiz Porto.jfif" alt="foto-gabriel-akira" class="foto" />
-            <ul>
-              <li>
-                <h2>Gabriel Ortiz Porto</h2>
-              </li>
-              <li>gabrielortizporto@gmail.com</li>
-              <li>Porto Alegre/RS</li>
-              <li>
-                <p>
-                  <a href="https://www.linkedin.com/in/gabriel-ortiz-porto-57a53939/"><img
-                      src="./images/linkedin-logo.png" alt="" /></a>
-
-                  <a href="https://github.com/gabrielortizporto"><img src="./images/github-logo.png" alt="" /></a>
-                </p>
-              </li>
-            </ul>
-          </div>
-          <div class="dados-pessoais" id="lara-vieira">
-            <img src="./images/Foto Lara Vieira Coelho.jpeg" alt="foto-gabriel-akira" class="foto" />
-            <ul>
-              <li>
-                <h2>Lara Vieira Coelho</h2>
-              </li>
-              <li>laravieiracoelho@hotmail.com</li>
-              <li>Itabira/MG</li>
-              <li>
-                <p>
-                  <a href="https://www.linkedin.com/in/lara-vieira-coelho-57731a1a7/"><img
-                      src="./images/linkedin-logo.png" alt="" /></a>
-
-                  <a href="https://github.com/laraavc16"><img src="./images/github-logo.png" alt="" /></a>
-                </p>
-              </li>
-            </ul>
-          </div>
-          <div class="dados-pessoais" id="leticia-camara">
-            <img src="./images/Foto Letícia Câmara.jpeg" alt="foto-gabriel-akira" class="foto" />
-            <ul>
-              <li>
-                <h2>Letícia Câmara</h2>
-              </li>
-              <li>lettcamara@gmail.com</li>
-              <li>Rio de Janeira/RJ</li>
-              <li>
-                <p>
-                  <a href="https://www.linkedin.com/in/letcamara/"><img src="./images/linkedin-logo.png" alt="" /></a>
-
-                  <a href="https://github.com/letcamara"><img src="./images/github-logo.png" alt="" /></a>
-                </p>
-              </li>
-            </ul>
-          </div>
-
-          <div class="dados-pessoais" id="luiz-felipe">
-            <ul>
-              <li>
-                <h2>Luis Felipe Monte Maior</h2>
-              </li>
-              <li>lfelipe.maior@gmail.com</li>
-              <li>Porto alegre/RS</li>
-              <li>
-                <p>
-                  <a href="https://www.linkedin.com/in/luis-felipe-maior-8a5330146"><img src="./images/linkedin-logo.png"
-                      alt="" /></a>
-
-                  <a href="https://github.com/b4ndini"><img src="./images/github-logo.png" alt="" /></a>
-                </p>
-              </li>
-            </ul>
-          </div>
-        </section>
+    </div>
   </main>
-  <!-- Rodapé -->
-  <footer class="container-fluid">
-    <div class="row" id="footer">
-      <p class="col-3"></p>
-      <span class="col-6">© 2013-2020. Todos os direitos reservados.</span>
-      <p class="col-3"></p>
+  <footer class="footer">
+    <div class="container">
+      <span>Copyright © 2020 Projeto. All Rights Reserved</span>
     </div>
   </footer>
 </body>
