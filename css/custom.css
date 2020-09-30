@@ -94,7 +94,7 @@ form{
   padding:10px;
 }
 
-section H1{
+h1.titlesearch {
   color: white;
   font-weight: bolder;
   display:block;
