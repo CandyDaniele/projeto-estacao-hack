@@ -74,11 +74,9 @@ header .ph__navbar-list a:hover::after {
 
 @media(max-width:720px){
 
-#formulario{
-  margin-bottom:5px;
-}
-
-
+  #formulario{
+    margin-bottom:5px;
+  }
 
 }
 
@@ -121,21 +119,14 @@ section H3{
 }
 
 .um {
-  
-  padding-right:50px;
-  padding-top:25px;
-}
-
-.dois {
-  
-  padding-left:50px;
-  
+  padding: 25px;
+  margin: 0px;
 }
 
  .row{
   margin:50px;
-  
 }
+
 
 
 /*----------------------------------------------
