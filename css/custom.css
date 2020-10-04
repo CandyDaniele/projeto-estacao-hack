@@ -477,3 +477,8 @@ a.card {color: #000000; text-decoration: none;}
  .card-body {
     border-top: 6px solid #107b7b;
 }
+
+.cep-local {
+  color: #b1b1b1;
+  text-transform: lowercase;
+}

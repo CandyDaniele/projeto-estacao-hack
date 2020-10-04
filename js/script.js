@@ -8,9 +8,9 @@ form.addEventListener('submit', async (evt) => {
   const medicine = inputMedicine.value;
 
   const resultCep = await getCep(cep);
-  
+
   if(!resultCep.erro){
-   window.location = `filtro.html?uf=${resultCep.uf}&city=${resultCep.localidade}&medicine=${medicine}`;
+  window.location = `filtro.html?uf=${resultCep.uf}&city=${resultCep.localidade}&medicine=${medicine}`;
   }else{
     alert("erro");
   }

@@ -22,9 +22,9 @@ async function getMedicines(medicine){
 
 function renderMedicineCard(resultMedicine) {
   if(resultMedicine.message){
-    titleMedicine.innerHTML += resultMedicine.message;
+    titleMedicine.innerHTML += `${resultMedicine.message}`;
   }else{
-    titleMedicine.innerHTML += medicineQuery;
+    titleMedicine.innerHTML += `${medicineQuery} <span class="cep-local"> em </span> ${cityQuery} - ${ufQuery}`;
     let stringInnerHTML = '';
     resultMedicine.data.forEach(medicine => {
       stringInnerHTML = '<a href="./dados.html" class="card p-0 m-md-2">';
