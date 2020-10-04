@@ -27,15 +27,15 @@ function renderMedicineCard(resultMedicine) {
     titleMedicine.innerHTML += medicineQuery;
     let stringInnerHTML = '';
     resultMedicine.data.forEach(medicine => {
-      stringInnerHTML = '<a href="./dados.html" class="card">';
-      stringInnerHTML +=  '<div class="card-body">';
-      stringInnerHTML +=  `<h5 class="card-title">${medicine.produto}</h5>`;
-      stringInnerHTML +=  `<p class="ph__remedy-value-notax card-text">R$ ${medicine.pmc12}</p>`;
-      stringInnerHTML +=  '<ul class="ph__remedy-components mb-0">';
-      stringInnerHTML +=  `<li class="ph__remedy-composition">${medicine.substancia}</li>`;
-      stringInnerHTML +=  `<li class="ph__remedy-laboratory">${medicine.laboratorio}</li>`;
-      stringInnerHTML +=  `<li class="ph__remedy-hospital">Restrito a Hospital: ${medicine.hospitalar?"Sim":"Não"}</li>`;
-      stringInnerHTML +=  `<li class="ph__remedy-targe">Tarja: ${medicine.tarja}</li>`;
+      stringInnerHTML = '<a href="./dados.html" class="card p-0 m-md-2">';
+      stringInnerHTML +=  '<div class="card-body m-0 p-0">';
+      stringInnerHTML +=  `<h5 class="card-title px-2 pt-4">${medicine.produto}</h5>`;
+      stringInnerHTML +=  `<p class="ph__remedy-value-notax card-text px-2">R$ ${medicine.pmc12}</p>`;
+      stringInnerHTML +=  '<ul class="ph__remedy-components mb-0 list-group list-group-flush">';
+      stringInnerHTML +=  `<li class="ph__remedy-composition list-group-item">${medicine.substancia}</li>`;
+      stringInnerHTML +=  `<li class="ph__remedy-laboratory list-group-item">${medicine.laboratorio}</li>`;
+      stringInnerHTML +=  `<li class="ph__remedy-hospital list-group-item"><span>Restrito a Hospital:</span> ${medicine.hospitalar?"Sim":"Não"}</li>`;
+      stringInnerHTML +=  `<li class="ph__remedy-targe list-group-item"><span>Tarja:</span> ${medicine.tarja}</li>`;
       stringInnerHTML +=  '</ul>';
       stringInnerHTML +=  '</div>';
       stringInnerHTML +=  '</a>';

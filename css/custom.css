@@ -27,6 +27,7 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased !important;
   font-size: 16px;
+  background: #f9f9f9;
 }
 
 /* Sticky footer styles
@@ -209,6 +210,7 @@ form button > svg {
 h5.card-title {
   color: #12263d;
   font-size: 1.5em;
+  font-weight: bold;
 }
 
 .ph__remedy-value-notax {
@@ -428,3 +430,50 @@ a {
 }
 
 a.card {color: #000000; text-decoration: none;}
+
+
+.ph__remedy-composition {
+  text-transform: lowercase;
+}
+
+.ph__remedy-laboratory,
+.ph__remedy-composition,
+.ph__remedy-hospital,
+.ph__remedy-targe {
+  color: #6b6b6b;
+}
+
+.ph__remedy-targe span,
+.ph__remedy-hospital span {
+  color: #12263d
+}
+
+    /* Number of Cards by Row based on Viewport */
+    @media (min-width: 576px) {
+      .card-group .card {
+          min-width: 50.1%; /* 1 Column */
+          margin-bottom: 12px;
+      }
+  }
+
+  @media (min-width: 768px) {
+      .card-group .card {
+          min-width: 33.4%;  /* 2 Columns */
+      }
+  }
+
+  @media (min-width: 992px) {
+      .card-group .card {
+          min-width: 25.1%;  /* 3 Columns */
+      }
+  }
+
+  @media (min-width: 1200px) {
+      .card-group .card {
+          min-width: 20.1%;  /* 4 Columns */
+      }
+  }
+
+ .card-body {
+    border-top: 6px solid #107b7b;
+}
