@@ -1,5 +1,5 @@
 const form = document.getElementById('formId');
-const header = document.querySelector('header')
+const header = document.querySelector('header');
 const inputCep = document.getElementById('cepId');
 const inputMedicine = document.getElementById('medicineId');
 
@@ -11,7 +11,7 @@ form.addEventListener('submit', async (evt) => {
   const resultCep = await getCep(cep);
 
   if(!resultCep.erro){
-  window.location = `filtro.html?uf=${resultCep.uf}&city=${resultCep.localidade}&medicine=${medicine}`;
+    window.location = `filtro.html?uf=${resultCep.uf}&city=${resultCep.localidade}&medicine=${medicine}`;
   }else{
     header.innerHTML += `
     <div class="alert alert-danger alert-dismissible fade show" role="alert">
@@ -20,7 +20,7 @@ form.addEventListener('submit', async (evt) => {
         <span aria-hidden="true">&times;</span>
       </button>
     </div>
-    `
+    `;
   }
 });
 
