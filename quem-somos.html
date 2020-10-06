@@ -49,7 +49,7 @@
                 <input class="ph__field-name" id="medicineId" type="text" placeholder="Nome do Remédio ou Princípio Ativo" required>
               </div>
               <div class="col-md-5 mb-2 mb-md-0 pr-md-0">
-                <input class="ph__field-state" id="cepId" type="text" placeholder="CEP" maxlength="8" minlength="8" required>
+                <input class="ph__field-state" placeholder="Digite seu CEP" id="cepId" type="text" class="form-control" onkeypress="$(this).mask('00.000-000');" required>
               </div>
               <div class="col-md-2 mb-2 mb-md-0">
                 <button type="submit">

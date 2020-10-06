@@ -5,7 +5,7 @@ const inputMedicine = document.getElementById('medicineId');
 
 form.addEventListener('submit', async (evt) => {
   evt.preventDefault();
-  const cep = inputCep.value;
+  const cep = (inputCep.value).replace(/\.|\-/g, '');
   const medicine = inputMedicine.value;
 
   const resultCep = await getCep(cep);
