@@ -33,7 +33,8 @@ function renderMedicineCard(resultMedicine) {
       stringInnerHTML = '<a href="./dados.html" class="card p-0 m-md-2">';
       stringInnerHTML += '<div class="card-body m-0 p-0">';
       stringInnerHTML += `<h5 class="card-title px-2 pt-4">${medicine.produto}</h5>`;
-      stringInnerHTML += `<p class="ph__remedy-value-notax card-text px-2">R$ ${medicine[valor]}</p>`;
+      stringInnerHTML += `<div class="mb-4"><p class="ph__remedy-value-withtax card-text px-2 mb-0">R$ ${medicine[valor]}</p><span class="ph__detail-text">(Com imposto - ${ufQuery})</span></div>`;
+      stringInnerHTML += `<div class="mb-4"><p class="ph__remedy-value-notax card-text px-2 mb-0">R$ ${medicine.semimposto}</p><span class="ph__detail-text">(Sem imposto)</span></div>`;
       stringInnerHTML +=
         '<ul class="ph__remedy-components mb-0 list-group list-group-flush">';
       stringInnerHTML += `<li class="ph__remedy-composition list-group-item">${(medicine.substancia).replaceAll(';', ', ')}</li>`;

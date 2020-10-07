@@ -221,10 +221,19 @@ h5.card-title {
   font-weight: bold;
 }
 
-.ph__remedy-value-notax {
+.ph__remedy-value-withtax {
   color: var(--secondary-color);
   font-size: 2em;
   font-weight: 600;
+}
+
+.ph__remedy-value-notax {
+  color: #13273d;
+  font-size: 1.4em;
+}
+
+.ph__detail-text {
+  color: #ccc
 }
 
 /* SOCIAL
