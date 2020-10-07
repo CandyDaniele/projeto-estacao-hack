@@ -456,12 +456,14 @@ a.card {color: #000000; text-decoration: none;}
 .ph__remedy-laboratory,
 .ph__remedy-composition,
 .ph__remedy-hospital,
-.ph__remedy-targe {
+.ph__remedy-targe,
+.ph__remedy-noTax {
   color: #6b6b6b;
 }
 
 .ph__remedy-targe span,
-.ph__remedy-hospital span {
+.ph__remedy-hospital span,
+.ph__remedy-noTax span {
   color: #12263d
 }
 

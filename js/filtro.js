@@ -34,14 +34,13 @@ function renderMedicineCard(resultMedicine) {
       stringInnerHTML += '<div class="card-body m-0 p-0">';
       stringInnerHTML += `<h5 class="card-title px-2 pt-4">${medicine.produto}</h5>`;
       stringInnerHTML += `<div class="mb-4"><p class="ph__remedy-value-withtax card-text px-2 mb-0">R$ ${medicine[valor]}</p><span class="ph__detail-text">(Com imposto - ${ufQuery})</span></div>`;
-      stringInnerHTML += `<div class="mb-4"><p class="ph__remedy-value-notax card-text px-2 mb-0">R$ ${medicine.semimposto}</p><span class="ph__detail-text">(Sem imposto)</span></div>`;
       stringInnerHTML +=
         '<ul class="ph__remedy-components mb-0 list-group list-group-flush">';
+      stringInnerHTML += `<li class="ph__remedy-noTax list-group-item"><span>Sem imposto: </span>R$ ${(medicine.semimposto)}</li>`;
       stringInnerHTML += `<li class="ph__remedy-composition list-group-item">${(medicine.substancia).replaceAll(';', ', ')}</li>`;
       stringInnerHTML += `<li class="ph__remedy-laboratory list-group-item">${medicine.laboratorio}</li>`;
-      stringInnerHTML += `<li class="ph__remedy-hospital list-group-item"><span>Restrito a Hospital:</span> ${
-        medicine.hospitalar ? 'Sim' : 'Não'
-      }</li>`;
+      stringInnerHTML += `<li class="ph__remedy-hospital list-group-item"><span>Restrito a Hospital:</span> ${medicine.hospitalar ? 'Sim' : 'Não'
+        }</li>`;
       stringInnerHTML += `<li class="ph__remedy-targe list-group-item"><span>Tarja:</span> ${medicine.tarja}</li>`;
       stringInnerHTML += '</ul>';
       stringInnerHTML += '</div>';
@@ -53,29 +52,29 @@ function renderMedicineCard(resultMedicine) {
 
 function findPmcByUf() {
   let result = '';
-  let cityLower = cityQuery.toLowerCase() ;
+  let cityLower = cityQuery.toLowerCase();
   switch (ufQuery) {
     case 'RJ':
       result = 'pmc20';
       break;
     case 'RO':
-      if(cityLower === 'guajará-mirim'){
+      if (cityLower === 'guajará-mirim') {
         result = 'pmc175alc';
-      }else{
+      } else {
         result = 'pmc175';
       }
       break;
     case 'AM':
-      if(cityLower === 'manaus' || cityLower === 'tabatinga'){
+      if (cityLower === 'manaus' || cityLower === 'tabatinga') {
         result = 'pmc18alc';
-      }else{
+      } else {
         result = 'pmc18';
       }
       break;
     case 'AP':
-      if(cityLower === 'macapá' || cityLower === 'santana'){
+      if (cityLower === 'macapá' || cityLower === 'santana') {
         result = 'pmc18alc';
-      }else{
+      } else {
         result = 'pmc18';
       }
       break;
@@ -95,16 +94,16 @@ function findPmcByUf() {
       result = 'pmc18';
       break;
     case 'RR':
-      if(cityLower === 'boa vista' || cityLower === 'bonfim'){
+      if (cityLower === 'boa vista' || cityLower === 'bonfim') {
         result = 'pmc17alc';
-      }else{
+      } else {
         result = 'pmc17';
       }
       break;
     case 'AC':
-      if(cityLower === 'brasiléia' || cityLower === 'epitaciolândia' || cityLower === 'cruzeiro do sul'){
+      if (cityLower === 'brasiléia' || cityLower === 'epitaciolândia' || cityLower === 'cruzeiro do sul') {
         result = 'pmc17alc';
-      }else{
+      } else {
         result = 'pmc17';
       }
       break;
