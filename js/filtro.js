@@ -38,6 +38,7 @@ function renderMedicineCard(resultMedicine) {
         '<ul class="ph__remedy-components mb-0 list-group list-group-flush">';
       stringInnerHTML += `<li class="ph__remedy-noTax list-group-item"><span>Sem imposto: </span>R$ ${(medicine.semimposto)}</li>`;
       stringInnerHTML += `<li class="ph__remedy-composition list-group-item">${(medicine.substancia).replaceAll(';', ', ')}</li>`;
+      stringInnerHTML += `<li class="ph__remedy-composition list-group-item">${(medicine.dosagem).match(/(\(?.+)(\)?(MG\/?G|UI\/G|UI|MG))/g)}</li>`;
       stringInnerHTML += `<li class="ph__remedy-laboratory list-group-item">${medicine.laboratorio}</li>`;
       stringInnerHTML += `<li class="ph__remedy-hospital list-group-item"><span>Restrito a Hospital:</span> ${medicine.hospitalar ? 'Sim' : 'Não'
         }</li>`;
