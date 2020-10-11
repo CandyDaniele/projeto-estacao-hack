@@ -383,29 +383,27 @@ h5.card-title {
 .dadospadding #nome{
   color: #F47C46;
   font-size: 48px;
-  padding-top: 3%;
-  padding-bottom: 2%;
   font-weight: bold;
 }
 
 .dadospadding p{
-  font-size: 35px;
+  font-size: 25px;
 }
 
 .dadospadding .identificacao{
   font-weight: bold;
-  padding-top: 3%;
+  color: #505050;
  }
 
  .dadospadding .dados{
-  color: #F47C46;
-  font-size: 43px;
-  padding-top: 2%;
-  padding-bottom: 6%;
+  color: #f57b47;
+  font-size: 25px;
+  text-transform: capitalize;
 }
 
 .dadospadding .descricao{
-  font-size: 28px ;
+  font-size: 16px;
+  color: #b1b1b1;
 }
 
 .dadospadding .destaque{
@@ -500,4 +498,29 @@ a.card {color: #000000; text-decoration: none;}
 .cep-local {
   color: #b1b1b1;
   text-transform: lowercase;
+}
+
+.img-banner {
+  max-height: 300px;
+}
+
+.filter_card {
+  border-left: 5px solid #188480;
+  margin-bottom: 2em;
+}
+.filter_card:last-child {
+  margin-bottom: 0;
+}
+.subtitle-commercialname {
+  color: #505050;
+  font-size: 20px;
+  font-weight: bolder;
+}
+.link-filter img {
+  width: 11px;
+  margin-right: 12px;
+}
+
+.link-filter {
+  text-decoration: revert;
 }

@@ -68,58 +68,56 @@
     </div>
   </header>
   <main>
-    <section class="container-fluid">
-      
+    <section class="container-fluid my-5">
       <div class="dadospadding">
-
-        <div class="row">
-          <div class="centralizado col-xs-12centralizado col-sm-12 col-md-8 col-lg-8 card">
-            <h3 id="nome">Nome comercial</h3>
-            <p><b>Nome comercial</b></p>
-          </div>
+        <a class="link-filter" href="filtro.html"><img src="images/back.svg" />Voltar para a lista do <span class="remedy-name"></span></a>
+        <div class="centralizado col-12 pb-3">
+          <h3 id="nome">Nome comercial</h3>
+          <span class="subtitle-commercialname">(Nome comercial)</span> 
         </div>
-
+        <hr />
+       <div class="container mb-5">
         <div class="row">
-          <div class="centralizado col-xs-12 col-sm-12 col-md-3 col-lg-3 card">
-            <p class="identificacao">Tarja</p>
-            <h3 id="tarja" class="dados">Tarja</h3>
-            <p class="descricao">Se refere a classificação dos remédios</p>
-          </div>
+            <div class="col-12 filter_card">
+              <p class="identificacao">Tarja: <span id="tarja" class="dados">Tarja</span></p>
+              
+              <p class="descricao">Se refere a classificação dos remédios</p>
+            </div>
 
-          <div class="centralizado col-xs-12 col-sm-12 col-md-3 col-lg-3 card">
-            <p class="identificacao">Preço máximo</p>
-            <h3 id = "maxValue" class="dados"><b>Preço máximo</b></h3>
-            <p class="descricao">Preço limite para a comercialização do medicamento em farmácias e drogarias.</p>
-          </div>
+            <div class="col-12 filter_card">
+              <p class="identificacao">Preço máximo: <span id = "maxValue" class="dados"><b>Preço máximo</b></span></p>
+              
+              <p class="descricao">Preço limite para a comercialização do medicamento em farmácias e drogarias.</p>
+            </div>
 
-          <div class="centralizado col-xs-12 col-sm-12 col-md-3 col-lg-3 card">
-            <p class="identificacao">Princípio Ativo</p>
-            <h3 id="principioAtivo" class="dados">Princípio Ativo</h3>
-            <p class="descricao">Substância responsável pela ação farmacológica do medicamento.</p>
-          </div>
-        </div>
+            <div class="col-12 filter_card">
+              <p class="identificacao">Princípio Ativo: <span id="principioAtivo" class="dados">Princípio Ativo</span></p>
+              
+              <p class="descricao">Substância responsável pela ação farmacológica do medicamento.</p>
+            </div>
+        
 
-        <div class="row">
-          <div class="centralizado col-xs-12 col-sm-12 col-md-3 col-lg-3 card">
-            <p class="identificacao">Preço sem Imposto</p>
-            <h3 id="valueWithoutTax" class="dados">Preço sem Imposto</h3>
+          <div class="col-12 filter_card">
+            <p class="identificacao">Preço sem Imposto: <span id="valueWithoutTax" class="dados">Preço sem Imposto</span></p>
+            
             <p class="descricao"> Preço do medicamento sem a incidência do Imposto sobre Circulação de
               Mercadorias e Prestação de Serviços (ICMS), PIS/Pasep e COFINS.</p>
           </div>
 
-          <div class="centralizado col-xs-12 col-sm-12 col-md-3 col-lg-3 card">
-            <p class="identificacao">Laboratório</p>
-            <h3 id="lab" class="dados">Laboratório</h3>
+          <div class="col-12 filter_card">
+            <p class="identificacao">Laboratório: <span id="lab" class="dados">Laboratório</span></p>
+            
             <p class="descricao">Laboratório farmacêutico responsável pela produção ou importação do medicamento.</p>
           </div>
 
-          <div class="centralizado col-xs-12 col-sm-12 col-md-3 col-lg-3 card">
-            <P class="identificacao">Restrito a Hospital</P>
-            <h3 id = "hospital" class="dados">Restrito a Hospital</h3>
-            <p class="descricao"> Medicamento em embalagem hospitalares e de uso restrito a hospitais e clínicas, não
-              pode ser vendido à população.</p>
+          <div class="col-12 filter_card">
+          <P class="identificacao">Restrito a Hospital: <span id = "hospital" class="dados">Restrito a Hospital</span></P>
+          
+          <p class="descricao"> Medicamento em embalagem hospitalares e de uso restrito a hospitais e clínicas, não
+            pode ser vendido à população.</p>
           </div>
         </div>
+       </div>
     </section>
   </main>
   <footer class="footer">
