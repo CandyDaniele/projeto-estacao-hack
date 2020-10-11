@@ -33,13 +33,13 @@ function renderMedicineCard(resultMedicine) {
     let finalValue;
     resultMedicine.data.forEach((medicine) => {
       finalValue = getFinalValue(medicine, value);
+      medicine.finalValue = finalValue === 0 ? 'Restrito' : `R$ ${finalValue}`;
 
-      stringInnerHTML = '<a href="./dados.html" class="card p-0 m-md-2">';
-      stringInnerHTML += '<div class="card-body m-0 p-0">';
+      stringInnerHTML = `<div class="card-body m-0 p-0">`;
       stringInnerHTML += `<h5 class="card-title px-2 pt-4">${medicine.produto}</h5>`;
-      stringInnerHTML += `<div class="mb-4"><p class="ph__remedy-value-withtax card-text px-2 mb-0">${finalValue === 0 ? 'Restrito' : 'R$ '+ finalValue}</p><span class="ph__detail-text">(Com imposto - ${ufQuery})</span></div>`;
-      stringInnerHTML +=
-        '<ul class="ph__remedy-components mb-0 list-group list-group-flush">';
+      stringInnerHTML += `<div class="mb-4"><p class="ph__remedy-value-withtax card-text px-2 mb-0">${medicine.finalValue}</p><span class="ph__detail-text">(Com imposto - ${ufQuery})</span></div>`;
+      stringInnerHTML += 
+      '<ul class="ph__remedy-components mb-0 list-group list-group-flush">';
       stringInnerHTML += `<li class="ph__remedy-noTax list-group-item"><span>Sem imposto: </span>R$ ${(medicine.semimposto)}</li>`;
       stringInnerHTML += `<li class="ph__remedy-composition list-group-item">${(medicine.substancia).replaceAll(';', ', ')}</li>`;
       stringInnerHTML += `<li class="ph__remedy-composition list-group-item">${(medicine.dosagem).match(/(\(?.+)(\)?(MG\/?G|UI\/G|UI|MG))/g)}</li>`;
@@ -48,9 +48,19 @@ function renderMedicineCard(resultMedicine) {
       }</li>`;
       stringInnerHTML += `<li class="ph__remedy-targe list-group-item"><span>Tarja:</span> ${medicine.tarja}</li>`;
       stringInnerHTML += '</ul>';
-      stringInnerHTML += '</div>';
-      stringInnerHTML += '</a>';
-      divCard.innerHTML += stringInnerHTML;
+      stringInnerHTML += '</div>'; 
+
+      let elementA = document.createElement("a"); 
+      elementA.classList.add("card", "p-0", "m-md-2");
+      elementA.href="./dados.html";
+
+      elementA.innerHTML += stringInnerHTML;
+
+      elementA.addEventListener("click", (evt) => {
+        sessionStorage.setItem("medicine", JSON.stringify(medicine));
+      });
+
+      divCard.appendChild(elementA);   
     });
   }
 }
