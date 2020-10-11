@@ -26,14 +26,18 @@ function renderMedicineCard(resultMedicine) {
   } else {
     titleMedicine.innerHTML += `${medicineQuery} <span class="cep-local"> em </span> ${cityQuery} - ${ufQuery}`;
 
-    const valor = findPmcByUf();
+    const value = findValueByUfAndCity();
+
     console.log(resultMedicine.data);
     let stringInnerHTML = '';
+    let finalValue;
     resultMedicine.data.forEach((medicine) => {
+      finalValue = getFinalValue(medicine, value);
+
       stringInnerHTML = '<a href="./dados.html" class="card p-0 m-md-2">';
       stringInnerHTML += '<div class="card-body m-0 p-0">';
       stringInnerHTML += `<h5 class="card-title px-2 pt-4">${medicine.produto}</h5>`;
-      stringInnerHTML += `<div class="mb-4"><p class="ph__remedy-value-withtax card-text px-2 mb-0">R$ ${medicine[valor]}</p><span class="ph__detail-text">(Com imposto - ${ufQuery})</span></div>`;
+      stringInnerHTML += `<div class="mb-4"><p class="ph__remedy-value-withtax card-text px-2 mb-0">${finalValue === 0 ? 'Restrito' : 'R$ '+ finalValue}</p><span class="ph__detail-text">(Com imposto - ${ufQuery})</span></div>`;
       stringInnerHTML +=
         '<ul class="ph__remedy-components mb-0 list-group list-group-flush">';
       stringInnerHTML += `<li class="ph__remedy-noTax list-group-item"><span>Sem imposto: </span>R$ ${(medicine.semimposto)}</li>`;
@@ -41,7 +45,7 @@ function renderMedicineCard(resultMedicine) {
       stringInnerHTML += `<li class="ph__remedy-composition list-group-item">${(medicine.dosagem).match(/(\(?.+)(\)?(MG\/?G|UI\/G|UI|MG))/g)}</li>`;
       stringInnerHTML += `<li class="ph__remedy-laboratory list-group-item">${medicine.laboratorio}</li>`;
       stringInnerHTML += `<li class="ph__remedy-hospital list-group-item"><span>Restrito a Hospital:</span> ${medicine.hospitalar ? 'Sim' : 'Não'
-        }</li>`;
+      }</li>`;
       stringInnerHTML += `<li class="ph__remedy-targe list-group-item"><span>Tarja:</span> ${medicine.tarja}</li>`;
       stringInnerHTML += '</ul>';
       stringInnerHTML += '</div>';
@@ -51,7 +55,7 @@ function renderMedicineCard(resultMedicine) {
   }
 }
 
-function findPmcByUf() {
+function findValueByUfAndCity() {
   let result = '';
   let cityLower = cityQuery.toLowerCase();
   switch (ufQuery) {
@@ -102,7 +106,11 @@ function findPmcByUf() {
       }
       break;
     case 'AC':
-      if (cityLower === 'brasiléia' || cityLower === 'epitaciolândia' || cityLower === 'cruzeiro do sul') {
+      if (
+        cityLower === 'brasiléia' ||
+        cityLower === 'epitaciolândia' ||
+        cityLower === 'cruzeiro do sul'
+      ) {
         result = 'pmc17alc';
       } else {
         result = 'pmc17';
@@ -113,4 +121,18 @@ function findPmcByUf() {
   }
 
   return result;
+}
+
+function getFinalValue(medicine, valueUfCity) {
+  let finalResult;
+  if (medicine.hospitalar) {
+    finalResult = 0;
+  } else if (medicine.icms0) {
+    finalResult = medicine.pmc0;
+  } else if((ufQuery == 'MG' || ufQuery == 'SP') && medicine.tipo.toLowerCase() == 'genérico'){
+    finalResult = medicine.pmc12;
+  } else {
+    finalResult =  medicine[valueUfCity];
+  }
+  return finalResult;
 }
