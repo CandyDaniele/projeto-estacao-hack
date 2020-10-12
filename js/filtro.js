@@ -35,14 +35,14 @@ function renderMedicineCard(resultMedicine) {
     let finalValue;
     resultMedicine.data.forEach((medicine) => {
       finalValue = getFinalValue(medicine, value);
-      medicine.finalValue = finalValue === 0 ? 'Restrito' : `R$ ${finalValue}`;
+      medicine.finalValue = finalValue === 0 ? 'Restrito' : `R$ ${finalValue.toFixed(2)}`;
 
       stringInnerHTML = `<div class="card-body m-0 p-0">`;
       stringInnerHTML += `<h5 class="card-title px-2 pt-4">${medicine.produto}</h5>`;
       stringInnerHTML += `<div class="mb-4"><p class="ph__remedy-value-withtax card-text px-2 mb-0">${medicine.finalValue}</p><span class="ph__detail-text">(Com imposto - ${ufQuery})</span></div>`;
       stringInnerHTML += 
       '<ul class="ph__remedy-components mb-0 list-group list-group-flush">';
-      stringInnerHTML += `<li class="ph__remedy-noTax list-group-item"><span>Sem imposto: </span>R$ ${(medicine.semimposto)}</li>`;
+      stringInnerHTML += `<li class="ph__remedy-noTax list-group-item"><span>Sem imposto: </span>R$ ${(medicine.semimposto.toFixed(2))}</li>`;
       stringInnerHTML += `<li class="ph__remedy-composition list-group-item">${(medicine.substancia).replaceAll(';', ', ')}</li>`;
       stringInnerHTML += `<li class="ph__remedy-composition list-group-item">${(medicine.dosagem).match(/(\(?.+)?(\)?(MG\/G|UI\/G|UI|MG))\)?|(\d{1,}G)/g)}</li>`;
       stringInnerHTML += `<li class="ph__remedy-laboratory list-group-item">${medicine.laboratorio}</li>`;
