@@ -7,6 +7,8 @@ let cityQuery = query.get('city');
 let medicineQuery = query.get('medicine');
 
 window.addEventListener('load', async () => {
+
+  createLoading("divCard");
   const resultMedicine = await getMedicines(medicineQuery);
 
   renderMedicineCard(resultMedicine);
@@ -14,8 +16,6 @@ window.addEventListener('load', async () => {
 
 async function getMedicines(medicine) {
   const url = `https://api-medicine-brazil.herokuapp.com/medicines?name=${medicine}`;
-
-  createLoading("divCard");
   const response = await fetch(url);
   const result = await response.json();
   if(result!==undefined){
