@@ -6,9 +6,11 @@ let principioAtivo = document.getElementById('principioAtivo');
 let valueWithoutTax = document.getElementById('valueWithoutTax');
 let lab = document.getElementById('lab');
 let hospital = document.getElementById('hospital');
+let backFilter = document.getElementById('backFilter');
 
 window.addEventListener("load", () => {
   let medicine = JSON.parse(sessionStorage.getItem("medicine"));
+  let urlFiltro = sessionStorage.getItem('urlFiltro');
 
   remedyName.innerText = medicine.produto;
   commercialName.innerText = medicine.produto;
@@ -18,4 +20,5 @@ window.addEventListener("load", () => {
   valueWithoutTax.innerText = 'R$ ' + medicine.semimposto;
   lab.innerText = medicine.laboratorio;
   hospital.innerText = medicine.hospitalar? 'Sim' : 'Não';
+  backFilter.href = urlFiltro;
 });

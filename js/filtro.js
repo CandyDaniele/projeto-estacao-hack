@@ -10,6 +10,8 @@ window.addEventListener('load', async () => {
   const resultMedicine = await getMedicines(medicineQuery);
 
   renderMedicineCard(resultMedicine);
+
+  saveUrlSession();
 });
 
 async function getMedicines(medicine) {
@@ -145,4 +147,8 @@ function getFinalValue(medicine, valueUfCity) {
     finalResult =  medicine[valueUfCity];
   }
   return finalResult;
+}
+
+function saveUrlSession() {
+  sessionStorage.setItem("urlFiltro", location.href);
 }
