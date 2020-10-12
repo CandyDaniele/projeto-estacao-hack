@@ -15,8 +15,12 @@ window.addEventListener('load', async () => {
 async function getMedicines(medicine) {
   const url = `https://api-medicine-brazil.herokuapp.com/medicines?name=${medicine}`;
 
+  createLoading("divCard");
   const response = await fetch(url);
   const result = await response.json();
+  if(result!==undefined){
+    removeLoading();
+  }
   return result;
 }
 
