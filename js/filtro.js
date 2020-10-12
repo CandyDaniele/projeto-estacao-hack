@@ -1,5 +1,6 @@
 const titleMedicine = document.getElementById('titleMedicine');
 const divCard = document.getElementById('divCard');
+const spinnerFilter = document.getElementById('spinnerFilter');
 
 let query = new URLSearchParams(location.search);
 let ufQuery = query.get('uf');
@@ -7,12 +8,30 @@ let cityQuery = query.get('city');
 let medicineQuery = query.get('medicine');
 
 window.addEventListener('load', async () => {
+  setLoad();
+
   const resultMedicine = await getMedicines(medicineQuery);
+
+  disableLoad();
 
   renderMedicineCard(resultMedicine);
 
   saveUrlSession();
 });
+
+function setLoad() {
+  let divCardHTML;
+  divCardHTML = '<div class="d-flex justify-content-center">';
+  divCardHTML += '<div class="spinner-border text-success m-5" style="width: 3rem; height: 3rem;" role="status">';
+  divCardHTML += '<span class="sr-only">Loading...</span>';
+  divCardHTML += '</div>';
+  divCardHTML += '</div>';
+  spinnerFilter.innerHTML = divCardHTML;
+}
+
+function disableLoad() {
+  spinnerFilter.innerHTML = '';
+}
 
 async function getMedicines(medicine) {
   const url = `https://api-medicine-brazil.herokuapp.com/medicines?name=${medicine}`;
@@ -23,6 +42,7 @@ async function getMedicines(medicine) {
 }
 
 function renderMedicineCard(resultMedicine) {
+  titleMedicine.innerHTML = '<span class="ribbon"></span>';
   if (resultMedicine.message) {
     titleMedicine.innerHTML += `${resultMedicine.message}`;
   } else {
