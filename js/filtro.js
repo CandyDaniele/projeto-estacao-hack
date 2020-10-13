@@ -12,7 +12,8 @@ window.addEventListener('load', async () => {
   createLoading("divCard");
   const resultMedicine = await getMedicines(medicineQuery);
 
-  disableLoad();
+  //disableLoad();
+  removeLoading();
 
   renderMedicineCard(resultMedicine);
 
@@ -37,9 +38,6 @@ async function getMedicines(medicine) {
   const url = `https://api-medicine-brazil.herokuapp.com/medicines?name=${medicine}`;
   const response = await fetch(url);
   const result = await response.json();
-  if(result!==undefined){
-    removeLoading();
-  }
   return result;
 }
 
