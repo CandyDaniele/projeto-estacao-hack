@@ -1,5 +1,6 @@
 const titleMedicine = document.getElementById('titleMedicine');
 const divCard = document.getElementById('divCard');
+const spinnerFilter = document.getElementById('spinnerFilter');
 
 let query = new URLSearchParams(location.search);
 let ufQuery = query.get('uf');
@@ -11,8 +12,26 @@ window.addEventListener('load', async () => {
   createLoading("divCard");
   const resultMedicine = await getMedicines(medicineQuery);
 
+  disableLoad();
+
   renderMedicineCard(resultMedicine);
+
+  saveUrlSession();
 });
+
+function setLoad() {
+  let divCardHTML;
+  divCardHTML = '<div class="d-flex justify-content-center">';
+  divCardHTML += '<div class="spinner-border text-success m-5" style="width: 3rem; height: 3rem;" role="status">';
+  divCardHTML += '<span class="sr-only">Loading...</span>';
+  divCardHTML += '</div>';
+  divCardHTML += '</div>';
+  spinnerFilter.innerHTML = divCardHTML;
+}
+
+function disableLoad() {
+  spinnerFilter.innerHTML = '';
+}
 
 async function getMedicines(medicine) {
   const url = `https://api-medicine-brazil.herokuapp.com/medicines?name=${medicine}`;
@@ -25,6 +44,7 @@ async function getMedicines(medicine) {
 }
 
 function renderMedicineCard(resultMedicine) {
+  titleMedicine.innerHTML = '<span class="ribbon"></span>';
   if (resultMedicine.message) {
     titleMedicine.innerHTML += `${resultMedicine.message}`;
   } else {
@@ -35,18 +55,22 @@ function renderMedicineCard(resultMedicine) {
     console.log(resultMedicine.data);
     let stringInnerHTML = '';
     let finalValue;
+    let dosagemRegex;
     resultMedicine.data.forEach((medicine) => {
       finalValue = getFinalValue(medicine, value);
-      medicine.finalValue = finalValue === 0 ? 'Restrito' : `R$ ${finalValue}`;
+      medicine.finalValue = finalValue === 0 ? 'Restrito' : `R$ ${finalValue.toFixed(2)}`;
+      dosagemRegex = (medicine.dosagem).match(/(\(?.+)?(\)?(MG\/G|UI\/G|UI|MG))\)?|(\d{1,}G)/g);
 
       stringInnerHTML = `<div class="card-body m-0 p-0">`;
       stringInnerHTML += `<h5 class="card-title px-2 pt-4">${medicine.produto}</h5>`;
       stringInnerHTML += `<div class="mb-4"><p class="ph__remedy-value-withtax card-text px-2 mb-0">${medicine.finalValue}</p><span class="ph__detail-text">(Com imposto - ${ufQuery})</span></div>`;
       stringInnerHTML += 
       '<ul class="ph__remedy-components mb-0 list-group list-group-flush">';
-      stringInnerHTML += `<li class="ph__remedy-noTax list-group-item"><span>Sem imposto: </span>R$ ${(medicine.semimposto)}</li>`;
+      stringInnerHTML += `<li class="ph__remedy-noTax list-group-item"><span>Sem imposto: </span>R$ ${(medicine.semimposto.toFixed(2))}</li>`;
       stringInnerHTML += `<li class="ph__remedy-composition list-group-item">${(medicine.substancia).replaceAll(';', ', ')}</li>`;
-      stringInnerHTML += `<li class="ph__remedy-composition list-group-item">${(medicine.dosagem).match(/(\(?.+)?(\)?(MG\/G|UI\/G|UI|MG))\)?|(\d{1,}G)/g)}</li>`;
+      if (dosagemRegex){
+        stringInnerHTML += `<li class="ph__remedy-composition list-group-item">${dosagemRegex}</li>`;
+      }
       stringInnerHTML += `<li class="ph__remedy-laboratory list-group-item">${medicine.laboratorio}</li>`;
       stringInnerHTML += `<li class="ph__remedy-hospital list-group-item"><span>Restrito a Hospital:</span> ${medicine.hospitalar ? 'Sim' : 'Não'
       }</li>`;
@@ -149,4 +173,8 @@ function getFinalValue(medicine, valueUfCity) {
     finalResult =  medicine[valueUfCity];
   }
   return finalResult;
+}
+
+function saveUrlSession() {
+  sessionStorage.setItem("urlFiltro", location.href);
 }
